@@ -1,5 +1,6 @@
 package com.github.jeffrey.spring.boot.controller.game.big2;
 
+import javax.persistence.*;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -7,9 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@Entity
 public class Big2Game {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @ManyToMany
+    @JoinTable(name = "big2game_player",joinColumns =@JoinColumn(name = "game_id"), inverseJoinColumns = @JoinColumn(name = "player_id"))
     private List<Player> players;
+
     private LocalDateTime gameTime;
 
     @Override
@@ -25,11 +33,11 @@ public class Big2Game {
     }
 
     public Big2Game(List<Integer> cardLost) {
-        int id = 0;
+        int playerid = 0;
         this.players = new ArrayList<>();
         for (Integer i: cardLost) {
-            ++id;
-            players.add(new Player("P" + id, i));
+            ++playerid;
+            players.add(new Player("P" + playerid, i));
         };
         gameTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.of("America/New_York"));
     }
@@ -37,6 +45,7 @@ public class Big2Game {
     public List<Player> getPlayers() {
         return players;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
