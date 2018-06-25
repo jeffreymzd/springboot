@@ -1,8 +1,8 @@
 package com.github.jeffrey.spring.boot.controller;
 
-import com.github.jeffrey.spring.boot.controller.game.big2.Big2Game;
-import com.github.jeffrey.spring.boot.controller.game.big2.repository.Big2GameRepository;
-import com.github.jeffrey.spring.boot.controller.game.big2.repository.PlayerRepository;
+import com.github.jeffrey.spring.boot.model.big2.game.Big2Game;
+import com.github.jeffrey.spring.boot.model.big2.game.repository.Big2GameRepository;
+import com.github.jeffrey.spring.boot.model.big2.game.repository.PlayerRepository;
 import com.github.jeffrey.spring.boot.engine.Big2Calculator;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;

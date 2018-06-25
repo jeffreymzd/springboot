@@ -1,4 +1,4 @@
-package com.github.jeffrey.spring.boot.controller.game.big2;
+package com.github.jeffrey.spring.boot.model.big2.game;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

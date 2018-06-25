@@ -1,7 +1,7 @@
 package com.github.jeffrey.spring.boot.engine;
 
-import com.github.jeffrey.spring.boot.controller.game.big2.Big2Game;
-import com.github.jeffrey.spring.boot.controller.game.big2.Player;
+import com.github.jeffrey.spring.boot.model.big2.game.Big2Game;
+import com.github.jeffrey.spring.boot.model.big2.game.Player;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
