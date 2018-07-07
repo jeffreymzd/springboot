@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Big2Calculator {
     public Big2Game calculateBig2GainOrLoss(List<Integer> nums) {
-        if (nums.size() != 4) {
+        if (nums.isEmpty()) {
             return null;
         }
         Big2Game gameResult = new Big2Game(nums);
