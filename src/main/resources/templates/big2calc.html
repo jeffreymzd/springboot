@@ -21,7 +21,8 @@ table, th, td {
     <tr th:each="player : ${players}">
         <td th:text="${player.name}">123</td>
         <td th:text="${player.cardsLost}">30</td>
-        <td th:text="${player.gainOrLoss}">100</td>
+        <td th:text="${player.gainOrLoss}"
+            th:style="(${player.gainOrLoss} < 0 ? 'background:red;':'background:green;')">100</td>
     </tr>
 </table>
 </body>
