@@ -32,6 +32,10 @@ public class Player {
         this.cardsLost = lost;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public int getCardsLost() {
         return cardsLost;
     }
