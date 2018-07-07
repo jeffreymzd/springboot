@@ -2,10 +2,27 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>BIG2 Calculator</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+table, th, td {
+    border: 1px solid black;
+}
+
+    </style>
 </head>
-<h1>Result</h1>
+<h1>Today's Game Result</h1>
 <body>
-${result}
+<table>
+    <tr>
+        <th>Player</th>
+        <th>CardLost</th>
+        <th>GainOrLost</th>
+    </tr>
+    <tr th:each="player : ${players}">
+        <td th:text="${player.name}">123</td>
+        <td th:text="${player.cardsLost}">30</td>
+        <td th:text="${player.gainOrLoss}">100</td>
+    </tr>
+</table>
 </body>
 </html>
